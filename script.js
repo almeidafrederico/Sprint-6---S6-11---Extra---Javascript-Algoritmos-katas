@@ -60,6 +60,25 @@ function calculateStock(estoqueAtual, estoqueMax, estoqueMin){
 console.log(calculateStock(20,20,30))
 
 
-function calculateAge(){
+function calculateAge(anoNascimento, anoAtual){
+    let anos        = `1. a idade dessa pessoa em anos: ${anoAtual-anoNascimento}`;
+    let meses       = `2. a idade dessa pessoa em meses: ${(anoAtual-anoNascimento)*12}`;
+    let dias        = `3. a idade dessa pessoa em dias: ${(anoAtual-anoNascimento)*365}`;
+    let semanas     = `4. a idade dessa pessoa em semanas: ${(((anoAtual-anoNascimento)*365)/7).toFixed(0)}`;
+
+    return `${anos} \n${meses} \n${dias} \n${semanas}`;
 
 }
+console.log(calculateAge(1901, 2000));
+
+
+function getDiagonal(matrizNxN){
+    let diagonalPrincipal = [];
+    for(let i = 0; i<matrizNxN.length; i++){
+        diagonalPrincipal.push(matrizNxN[i][i])
+    }
+    return diagonalPrincipal;
+}
+
+let matriz = [ [1, 2, 3] , [4, 5, 6] , [7, 8, 9] ];
+console.log(getDiagonal(matriz));
