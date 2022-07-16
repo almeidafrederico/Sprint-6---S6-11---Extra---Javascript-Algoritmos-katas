@@ -8,11 +8,11 @@ function calculateSalary(salarioFixo, totalVendas){
         return salarioTotal/100;
     }
 }
-
 let salario = calculateSalary(1200, 2400)
 console.log(`Salario do vendendo: R$ ${salario}`);
 salario = calculateSalary(1200, 1200)
 console.log(`Salario do vendendo: R$ ${salario}`);
+
 
 
 function cashMachine(saque, salarioFixo, totalVendas){
@@ -45,6 +45,21 @@ function cashMachine(saque, salarioFixo, totalVendas){
     return saqueRealizado
 
 }
-
 console.log(cashMachine(1100, 1200, 2400))
 
+
+
+function calculateStock(estoqueAtual, estoqueMax, estoqueMin){
+    let estoqueMed = (estoqueMax + estoqueMin)/2
+    if(estoqueMed<=estoqueAtual){
+        return "Não efetuar compra";
+    }else{
+        return "Efetuar compra";
+    }
+}
+console.log(calculateStock(20,20,30))
+
+
+function calculateAge(){
+
+}
